@@ -115,7 +115,11 @@ public class MapTest {
         list.stream().sorted().forEach(System.out::println);
 
         //抛异常，原因:Employee没有实现Comparable接口
-        List<Employee> employees = EmployeeData.getEmployees();
+        try {
+            List<Employee> employees = EmployeeData.getEmployees();
+        } catch (Exception e) {
+            throw new RuntimeException("接口异常，Employee没有实现Comparable接口");
+        }
 //        employees.com.hznu.lambda.com.hznu.entity.stream().sorted().forEach(System.out::println);
 
         //sorted(Comparator com)——定制排序

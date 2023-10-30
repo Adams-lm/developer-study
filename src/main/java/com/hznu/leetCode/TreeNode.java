@@ -1,7 +1,7 @@
 package com.hznu.leetCode;
 
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
 
 /**
  * @author LIN
@@ -24,33 +24,44 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
-}
 
-class Soluton {
+
+
     public static void main(String[] args) {
-        String[] m = {"123", "456", "789"};
-        String[] n = {"123", "234", "456", "567"};
-        System.out.println(findSame(m, n));
+
+
+
     }
 
-    private static List<String> findSame(String[] m, String[] n) {
-        int minLength = Math.min(m.length, n.length);
-        List<String> same = new LinkedList<String>();
-        int i = 0, j = 0;
-        while (j < minLength && i < minLength) {
-            if (m[i].equals(n[j])) {
-                same.add(m[i]);
-                i++;
-                j++;
-            } else if (Integer.parseInt(m[i]) < Integer.parseInt(n[j])) {
-                i++;
-            } else {
-                j++;
-            }
+    int minDepth(TreeNode root) {
+        if (null == root){
+            return 0;
         }
-        return same;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int level = 1;
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (node.left==null && node.right==null) {
+                    return level;
+                }
+                if (node.left!=null) {
+                    queue.offer(node.left);
+                }
+                if (node.right!=null) {
+                    queue.offer(node.right);
+                }
+            }
+            level++;
+        }
+        return level;
     }
+
+
 
 
 }
+
 

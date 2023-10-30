@@ -1,6 +1,7 @@
 package com.hznu.lambda.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author LIN
@@ -8,6 +9,7 @@ import lombok.Data;
  */
 
 @Data
+@NoArgsConstructor
 public class Employee {
 
     private Integer id;
@@ -20,5 +22,15 @@ public class Employee {
         this.name = name;
         this.salary = salary;
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                ", age=" + age +
+                '}';
     }
 }

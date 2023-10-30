@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ADI>
+    <Asset>
+        <Metadata>
+            <AMS Provider="Rojao_IAS" Asset_ID="ADVV2001081701004000" Asset_Class="title" Verb="CREATE" />
+            <App_Data App="MOD" Name="Type" Value="title"/>
+            <App_Data App="MOD" Name="Year" Value="2016"/>
+        </Metadata>
+        <Asset>
+            <Metadata>
+                <AMS Provider="Rojao_IAS" Asset_ID="ADVV2001081701004000" Asset_Class="movie" Verb="CREATE" />
+                <App_Data App="MOD" Name="Encryption" Value="N"/>
+                <App_Data App="MOD" Name="Type" Value="movie"/>
+                <App_Data App="MOD" Name="Status" Value="0"/>
+            </Metadata>
+            <Content Value="ADVV2001081701004000.mpg"/>
+        </Asset>
+    </Asset>
+</ADI>
