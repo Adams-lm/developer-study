@@ -1,8 +1,27 @@
-### Example user template template
-### Example user template
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+.flattened-pom.xml
 
-# IntelliJ project files
-.idea
+# idea ignore
+.idea/
+*.ipr
 *.iml
-out
-gen
+*.iws
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# temp ignore
+*.log
+
+# system ignore
+.DS_Store
+Thumbs.db
+*.orig
