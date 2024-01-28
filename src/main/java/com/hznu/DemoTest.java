@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @author LIN
+ * @author LINMing
  * @date 2022/4/17 11:48
  */
 public class DemoTest {
